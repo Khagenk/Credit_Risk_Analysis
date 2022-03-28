@@ -46,7 +46,7 @@ The balance between low risk and high risk is imbalanced, but this was expected 
 
 
 # Oversampling algorithm
-# naive random oversampling
+## Naive random oversampling
 
 ![Screen Shot 2022-03-27 at 11 34 37 PM](https://user-images.githubusercontent.com/94031446/160322132-6ad8fff7-1449-4db9-8812-46e8437a0031.png)
 
@@ -74,7 +74,7 @@ Comparing the performance of the naive random oversampling and SMOTE oversamplin
 
 # Undersampling algorithm
 
-# ClusterCentroids
+## ClusterCentroids
 The ClusterCentroid algorithm provides an efficient way to represent data clusters with a small number of samples. A cluster is a group of data points grouped because of some similarity. This algorithm does this by performing K-means clustering on the majority class, Low_risk, and then creating new data points that are the average of the coordinates of the generated cluster.
 After the data was balanced and trained, subsampling the ClusterCentroids yielded the following scores:
 
@@ -88,7 +88,7 @@ A mean accuracy score of 0.99 means that the ClusterCentroid algorithm predicted
 A mean recall score of 0.67 means that 67% of class predictions made from all positive examples in the dataset were correct, while 33% were incorrect.
 
 # Composite sample
-# SMOTENN
+## SMOTENN
 The SMOTEENN algorithm is a combination of the SMOTE and Edit Nearest Neighbor (ENN) algorithms. Simply put, SMOTEENN randomly observes the minority class (high risk) and the majority class (low risk)
 After the data is balanced and trained, the SMOTEEN algorithm obtains the following scores:
 Balanced Accuracy: 0.644
@@ -103,7 +103,7 @@ An average accuracy score of 0.99 is given by the SMOTEENN algorithm for positiv
 The mean dataset was found to have a mean recall score of 0.67, with 67% of all positive examples being correct, while 33% were incorrect.
 
 # Ensemble Learners
-# Balanced Random Forest Classifier
+## Balanced Random Forest Classifier
 The Balanced Random Forest Classifier is an ensemble method where each tree in the ensemble is built from a sample drawn with replacement (bootstrap sample) from the training set. Instead of using all the features, a random subset of features is selected, which further randomizes the tree. As a result, the bias of the forest increases slightly, but since the less correlated trees are averaged, its variance decreases, which results in an overall better model.
 
 After the data is balanced and trained, the following numbers are obtained using the balanced random forest algorithm:
