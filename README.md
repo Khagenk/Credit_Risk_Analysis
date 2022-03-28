@@ -50,7 +50,7 @@ The balance between low risk and high risk is imbalanced, but this was expected 
 
 ![Screen Shot 2022-03-27 at 11 34 37 PM](https://user-images.githubusercontent.com/94031446/160322132-6ad8fff7-1449-4db9-8812-46e8437a0031.png)
 
-A balanced accuracy score of 0.644 means that 35.6% of the squares are wrong and 64.4% are correct.
+A balanced accuracy score of 0.644 means that 35.6% of the squares are incorrect and 64.4% are correct.
 
 A mean accuracy score of 0.99 means that this model determined the number of positive class predictors that belonged to the positive class 99% of the time.
 
@@ -61,6 +61,7 @@ SMOTE Oversampling
 In the Synthetic Minority Oversampling Technique (SMOTE) oversampling model, the minority (high risk) class is repeated before the model is fitted. It can balance the class distribution but does not provide any additional information to the model. SMOTE selects adjacent data points in the feature space, draws a line between the points in the feature space, and draws a new sample at a point along that line. Realistic high_risk data is created that is relatively close to existing high-risk data.
 
 After the data is balanced and trained, SMOTE oversampling yields the following scores:
+
 Balanced Accuracy: 0.648
 
 ![Screen Shot 2022-03-27 at 11 36 14 PM](https://user-images.githubusercontent.com/94031446/160322277-d9a4a969-777b-449c-ac8a-569712848895.png)
@@ -73,9 +74,10 @@ Comparing the performance of the naive random oversampling and SMOTE oversamplin
 
 # Undersampling algorithm
 
-#ClusterCentroids
+# ClusterCentroids
 The ClusterCentroid algorithm provides an efficient way to represent data clusters with a small number of samples. A cluster is a group of data points grouped because of some similarity. This algorithm does this by performing K-means clustering on the majority class, Low_risk, and then creating new data points that are the average of the coordinates of the generated cluster.
 After the data was balanced and trained, subsampling the ClusterCentroids yielded the following scores:
+
 Balanced Accuracy: 0.644
 
 ![Screen Shot 2022-03-27 at 11 38 19 PM](https://user-images.githubusercontent.com/94031446/160322430-da5e89fe-6c3c-4433-9301-f648852317c6.png)
@@ -91,6 +93,9 @@ The SMOTEENN algorithm is a combination of the SMOTE and Edit Nearest Neighbor (
 After the data is balanced and trained, the SMOTEEN algorithm obtains the following scores:
 Balanced Accuracy: 0.644
 
+![Screen Shot 2022-03-28 at 1 36 33 AM](https://user-images.githubusercontent.com/94031446/160332975-72eedea9-e4aa-47ef-b8d0-8224479f0daf.png)
+
+
 SMOTEENN had a balanced accuracy score of 0.644, meaning that 64.4% of the class predictions were correct and 35.6% were incorrect.
 
 An average accuracy score of 0.99 is given by the SMOTEENN algorithm for positive class prediction 99% of the time in the dataset.
@@ -105,6 +110,7 @@ After the data is balanced and trained, the following numbers are obtained using
 
 Balanced Accuracy: 0.788
 
+![Screen Shot 2022-03-28 at 1 38 16 AM](https://user-images.githubusercontent.com/94031446/160333123-449452a6-0a4e-42b9-907e-b92e36ce0115.png)
 
 
 The balanced accuracy score of the Yo algorithm was 0.788g, meaning that approximately 79% of the class predictions were correct and 21% incorrect.
@@ -121,6 +127,7 @@ The data was balanced and trained using the old Easy Ensemble AdaBoost classifie
 
 Balanced Accuracy: 0.672
 
+![Screen Shot 2022-03-28 at 1 38 48 AM](https://user-images.githubusercontent.com/94031446/160333179-a76955f9-509d-45da-9cf1-9d03f5ee2a7b.png)
 
 
 The Easy Ensemble AdaBoost classifier achieved an accuracy score of 0.925, which means it got predictions right 92.5% of the time and 7.5% of the time wrong.
